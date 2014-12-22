@@ -40,4 +40,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\roman-numerals-csharp\roman-numerals-csharp.csproj">
+      <Project>{9AB05859-DE23-4808-8479-EB8DA0F2F102}</Project>
+      <Name>roman-numerals-csharp</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

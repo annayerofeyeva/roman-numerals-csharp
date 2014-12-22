@@ -1,0 +1,5 @@
+/Users/Macbook/Desktop/coding/roman-numerals-csharp/roman-numerals-csharp/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/Macbook/Desktop/coding/roman-numerals-csharp/roman-numerals-csharp/bin/Debug/roman-numerals-csharp.exe.mdb
+/Users/Macbook/Desktop/coding/roman-numerals-csharp/roman-numerals-csharp/bin/Debug/roman-numerals-csharp.exe
+/Users/Macbook/Desktop/coding/roman-numerals-csharp/roman-numerals-csharp/obj/x86/Debug/roman-numerals-csharp.exe
+/Users/Macbook/Desktop/coding/roman-numerals-csharp/roman-numerals-csharp/obj/x86/Debug/roman-numerals-csharp.exe.mdb

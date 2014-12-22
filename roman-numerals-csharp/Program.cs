@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Security.Principal;
 
 namespace romannumeralscsharp
 {
-	class MainClass
+	public class RomanNumerals
 	{
-		public static void Main (string[] args)
+		public static void Main ()
 		{
-			Console.WriteLine ("Hello World!");
+			Console.WriteLine(TranslateUnits (2));
+		}
+
+		public static string TranslateUnits (int num)
+		{
+			string[] units = new string[10] {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+			return units [(num % 10)];
 		}
 	}
 }
