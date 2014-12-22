@@ -7,9 +7,9 @@ namespace romannumeralscsharp
 	{
 		public static void Main ()
 		{
-			Console.WriteLine(TranslateUnits (2));
-			Console.WriteLine(TranslateTens (20));
-			Console.WriteLine(TranslateHundrets (200));
+			Console.WriteLine(TranslateWholeNumber (2));
+			Console.WriteLine(TranslateWholeNumber (20));
+			Console.WriteLine(TranslateWholeNumber (199));
 		}
 
 		public static string TranslateUnits (int num)
@@ -28,6 +28,12 @@ namespace romannumeralscsharp
 		{
 			string[] hundrets = new string[10] {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
 			return hundrets[(num % 1000) / 100];
+		}
+
+		public static string TranslateWholeNumber (int num)
+		{
+			string roman = TranslateHundrets (num) + TranslateTens (num) + TranslateUnits (num);
+			return roman;
 		}
 	}
 }

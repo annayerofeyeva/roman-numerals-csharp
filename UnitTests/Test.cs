@@ -57,6 +57,22 @@ namespace UnitTests
 				Assert.AreEqual (RomanNumerals.TranslateHundrets (test.Key), test.Value);
 			}
 		}
+
+		[Test ()]
+		public void TestingWholeNumber ()
+		{
+			Dictionary<int, string> tests = new Dictionary<int, string> ();
+			tests[100] = "C";
+			tests[550] = "DL";
+			tests[69] = "LXIX";
+			tests[276] = "CCLXXVI";
+			tests[810] = "DCCCX";
+
+			foreach(KeyValuePair<int, string> test in tests ) 
+			{
+				Assert.AreEqual (RomanNumerals.TranslateWholeNumber (test.Key), test.Value);
+			}
+		}
 	}
 }
 
