@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using romannumeralscsharp;
+using System.Collections;
 
 namespace UnitTests
 {
@@ -11,28 +13,49 @@ namespace UnitTests
 		[Test ()]
 		public void TestingTranslateUnits ()
 		{
-			Assert.AreEqual ("I", RomanNumerals.TranslateUnits (1));
-			Assert.AreEqual ("V", RomanNumerals.TranslateUnits (5));
-			Assert.AreEqual ("", RomanNumerals.TranslateUnits (10));
-			Assert.AreEqual ("III", RomanNumerals.TranslateUnits (13));
+			Dictionary<int, string> tests = new Dictionary<int, string> ();
+			tests[1] = "I";
+			tests[5] = "V";
+			tests[10] = "";
+			tests[16] = "VI";
+			tests[399] = "IX";
+
+			foreach(KeyValuePair<int, string> test in tests ) 
+			{
+				Assert.AreEqual (RomanNumerals.TranslateUnits (test.Key), test.Value);
+			}
 		}
 
 		[Test ()]
-		public void TestingTranslatingTens ()
+		public void TestingTranslateTens ()
 		{
-			Assert.AreEqual ("X", RomanNumerals.TranslateTens (10));
-			Assert.AreEqual ("L", RomanNumerals.TranslateTens (55));
-			Assert.AreEqual ("", RomanNumerals.TranslateTens (100));
-			Assert.AreEqual ("X", RomanNumerals.TranslateTens (514));
+			Dictionary<int, string> tests = new Dictionary<int, string> ();
+			tests[10] = "X";
+			tests[55] = "L";
+			tests[100] = "";
+			tests[514] = "X";
+			tests[399] = "XC";
+
+			foreach(KeyValuePair<int, string> test in tests ) 
+			{
+				Assert.AreEqual (RomanNumerals.TranslateTens (test.Key), test.Value);
+			}
 		}
 
 		[Test ()]
-		public void TestingTranslatingHundrets ()
+		public void TestingTranslateHundrets ()
 		{
-			Assert.AreEqual ("C", RomanNumerals.TranslateHundrets (100));
-			Assert.AreEqual ("D", RomanNumerals.TranslateHundrets (555));
-			Assert.AreEqual ("", RomanNumerals.TranslateHundrets (1000));
-			Assert.AreEqual ("DC", RomanNumerals.TranslateHundrets (1698));
+			Dictionary<int, string> tests = new Dictionary<int, string> ();
+			tests[100] = "C";
+			tests[555] = "D";
+			tests[1000] = "";
+			tests[1698] = "DC";
+			tests[1999] = "CM";
+
+			foreach(KeyValuePair<int, string> test in tests ) 
+			{
+				Assert.AreEqual (RomanNumerals.TranslateHundrets (test.Key), test.Value);
+			}
 		}
 	}
 }
