@@ -7,9 +7,10 @@ namespace romannumeralscsharp
 	{
 		public static void Main ()
 		{
-			Console.WriteLine(TranslateWholeNumber (2));
-			Console.WriteLine(TranslateWholeNumber (20));
-			Console.WriteLine(TranslateWholeNumber (199));
+			for (int i = 1; i < 100; i++) 
+			{
+				Console.WriteLine(TranslateWholeNumber (i));
+			}
 		}
 
 		public static string TranslateUnits (int num)
